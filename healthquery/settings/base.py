@@ -121,7 +121,8 @@ INSTALLED_APPS = (
     'tagging',
     'crispy_forms',
     'django_markdown',
-    'healthquery.diseases'
+    'healthquery.diseases',
+    'healthquery.common'
 )
 
 # A sample logging configuration. The only tangible logging
