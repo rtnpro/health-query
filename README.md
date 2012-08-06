@@ -1,4 +1,4 @@
-OpenHealth
-==========
+healthQuery
+===========
 
-An open all purpose health app
+A crowdsourced health query service.
