@@ -6,8 +6,8 @@
     <div class="hero-content">
         <h1>healthQuery</h1>
         <br/>
-        <form class="form-search" action="#" method="GET">{% csrf_token %}
-          <input type="text" class="span6 search-query" placeholder="How do you feel?" name="tags" style="height:35px;"></input>
+        <form class="form-search" action="{% url health_query_search %}" method="GET">{% csrf_token %}
+          <input type="text" id="id_q" name="q" class="span6 search-query" placeholder="How do you feel?" name="tags" style="height:35px;"></input>
         </form>
     </div>
 </div>

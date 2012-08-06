@@ -119,6 +119,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'south',
     'tagging',
+    'haystack',
     'crispy_forms',
     'django_markdown',
     'healthquery.diseases',
@@ -156,3 +157,11 @@ LOGGING = {
 
 CRISPY_TEMPLATE_PACK = 'bootstrap'
 MARKDOWN_EDITOR_SKIN = 'simple'
+
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
+        'URL': 'http://127.0.0.1:8983/solr'
+    },
+}
+HAYSTACK_DEFAULT_OPERATOR = 'OR'
