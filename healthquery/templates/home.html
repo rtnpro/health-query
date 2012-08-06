@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="hero-unit">
+    <div class="hero-content">
+        <h1>healthQuery</h1>
+        <br/>
+        <form class="form-search" action="#" method="GET">{% csrf_token %}
+          <input type="text" class="span6 search-query" placeholder="How do you feel?" name="tags" style="height:35px;"></input>
+        </form>
+    </div>
+</div>
+{% block extra_content %}
+{% endblock %}
+{% endblock %}

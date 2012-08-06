@@ -1,0 +1,10 @@
+Django==1.4
+django-ajax-selects==1.1.4
+django-social-auth
+django-pjax
+django-multilingual
+django-tagging-autocomplete==0.3.1
+django-staticfiles==1.2.1
+
+-e git+git://github.com/jkal/django-pagination.git#egg=django-pagination
+-e git+git://github.com/mpessas/django-tagging.git#egg=django-tagging

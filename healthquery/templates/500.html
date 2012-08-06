@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{{ block.super }} | {% trans "Fatal error" %}{% endblock %}
+
+{% block content %}
+<div class="hero-unit">
+    <h1>{% trans "Fatal error" %}</h1>
+</div>
+{% endblock %}

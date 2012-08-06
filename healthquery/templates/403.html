@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{{ block.super }} | {% trans "Forbidden access" %}{% endblock %}
+
+{% block content %}
+<div class="hero-unit">
+    <h1>403</h1> <h2>{% trans "Forbidden access" %}</h2>
+    <p>{% trans "Looks like you do not have the necessary permissions for the required action." %}</p>
+</div>
+{% endblock %}
