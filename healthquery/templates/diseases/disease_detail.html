@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<ul class="breadcrumb">
+    <li>
+        <a href="#">Diseases</a><span class="divider">/</span>
+    </li>
+    <li class="active">
+        <h2>{{ disease.name }}</h2>
+    </li>
+</ul>
+<section id="summary">
+    <div class="page-header">
+        <h2>{% trans "Summary" %}</h2>
+    </div>
+    <div id="summary" class="row">
+        <div class="span1 well" style="text-align:center;">
+            <p>Severity</p>
+            <h1>{{ disease.severity }}</h1>
+        </div>
+        <div class="span7">
+            {{ disease.summary }}
+        </div>
+    </div>
+</section>
+<section id="symptoms">
+    <div class="page-header">
+        <h2>{% trans "Symptoms" %}</h2>
+    </div>
+    <div id="summary" class="row">
+        <div class="span9">
+            {% for symptom in disease.tagsobj.all %}
+            <span class="btn"><a href="#">{{ symptom.name }}</a></span> 
+            {% empty %}
+                {% trans "No symptom listed yet." %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<section id="description">
+    <div class="page-header">
+        <h2>{% trans "Description" %}</h2>
+    </div>
+    <div id="summary" class="row">
+        <div class="span9">
+            {{ disease.description }}
+        </div>
+    </div>
+</section>
+<section id="remedies">
+    <div class="page-header">
+        <h2>{% trans "Remedies" %}</h2>
+    </div>
+    <div id="summary" class="row">
+        <div class="span9">
+            <ul class="unstyled">
+                {% for remedy in disease.remedies.all %}
+                <li><a href="#">{{ remedy.name }}</a></li>
+                {% empty %}
+                    {% trans "No remedy listed yet." %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>
+<section id="medicines">
+    <div class="page-header">
+        <h2>{% trans "Medicines" %}</h2>
+    </div>
+    <div id="summary" class="row">
+        <div class="span9">
+            <ul class="unstyled">
+                {% for medicine in disease.medicines.all %}
+                <li><a href="#">{{ medicine.name }}</a></li>
+                {% empty %}
+                    {% trans "No remedy listed yet." %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>
+{% endblock %}

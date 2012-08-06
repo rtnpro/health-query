@@ -118,6 +118,10 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'south',
+    'tagging',
+    'crispy_forms',
+    'django_markdown',
+    'healthquery.diseases'
 )
 
 # A sample logging configuration. The only tangible logging
@@ -148,3 +152,6 @@ LOGGING = {
         },
     }
 }
+
+CRISPY_TEMPLATE_PACK = 'bootstrap'
+MARKDOWN_EDITOR_SKIN = 'simple'
