@@ -32,6 +32,7 @@ urlpatterns = patterns('',
         form_class=HealthQuerySearchForm
     ), name="health_query_search"),
     url(r'^search/', include('haystack.urls')),
+    url(r'^knowledge/', include('knowledge.urls')),
 )
 
 urlpatterns += staticfiles_urlpatterns()

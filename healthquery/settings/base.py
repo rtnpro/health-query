@@ -122,6 +122,7 @@ INSTALLED_APPS = (
     'haystack',
     'crispy_forms',
     'django_markdown',
+    'knowledge',
     'healthquery.diseases',
     'healthquery.common'
 )
