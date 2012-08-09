@@ -37,6 +37,8 @@ urlpatterns = patterns('',
     url(r'^accounts/login/$', 'healthquery.common.views.login',
         name='login'),
     url(r'', include('social_auth.urls')),
+    url(r'^support/$', 'healthquery.common.views.support',
+        name='support')
 )
 
 urlpatterns += staticfiles_urlpatterns()
