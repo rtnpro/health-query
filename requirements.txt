@@ -6,16 +6,18 @@ django-appconf==0.5
 django-crispy-forms==1.1.4
 -e git+https://github.com/toastdriven/django-haystack.git@edb3ca5c3723fde9f0e7a51762e203d899ceed58#egg=django_haystack-dev
 django-markdown==0.1.0
-django-markdown-deux==1.0.3
-django-pagedown==0.0.1
+django-social-auth==0.7.2
 django-staticfiles==1.2.1
 django-tagging==0.3.1
+httplib2==0.7.4
 ipdb==0.7
 ipython==0.13
 markdown2==2.0.1
+oauth2==1.5.211
 psycopg2==2.4.1
 pyparsing==1.5.6
 pysolr==2.1.0-beta
+python-openid==2.2.5
 virtualenv==1.7.2
 virtualenv-clone==0.2.4
 virtualenvwrapper==3.5
