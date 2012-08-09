@@ -1,0 +1,873 @@
+[
+  {
+    "pk": 1, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Beets and Carrots", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Raw garlic", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Aloevera", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Lots of Water", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Garlic juice", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Tea with half teaspoon of fenugreek seeds", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Oregano Oil", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Salt Water", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 9, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Lot of Water", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 10, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Mustard Oil to massage back", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 11, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Basil Leaves", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 12, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Water", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 13, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Garlic", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 14, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Absolutely no solid food", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 15, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Ginger Tea", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 16, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Cinammon", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 17, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Fenugreek seeds", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 18, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Lime Juice", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 19, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Turmeric and Cloves in food", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 20, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Eucalyptus Oil", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 21, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Herbal Tea", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 22, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Intake of table salt", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 23, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Pomegranates", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 24, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Turmeric", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 25, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Epsom Salt", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 26, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Luke warm water", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 27, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Oral rehydration salt", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 28, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Orange Juice", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 29, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "COD Liver oil", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 30, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Warm Milk with honey and turmeric", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 31, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Gargle with hot water and salt", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 32, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Small piece of boiled ginger with tea", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 33, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Lemon Juice", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 34, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Ginger", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 35, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Honey", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 36, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Carrot juice", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 37, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Beetroot juice", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 38, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Grapefruit seed extract", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 39, 
+    "model": "diseases.remedy", 
+    "fields": {
+      "tags": "", 
+      "name": "Apple cided vinegar", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "diseases.medicine", 
+    "fields": {
+      "tags": "", 
+      "name": "Leukotriene Inhibitors", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "diseases.medicine", 
+    "fields": {
+      "tags": "", 
+      "name": "Cromolyn Sodium", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "diseases.medicine", 
+    "fields": {
+      "tags": "", 
+      "name": "Acetaminophen- incase of fever", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "diseases.medicine", 
+    "fields": {
+      "tags": "", 
+      "name": "Inhaled Corticosteroids", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "diseases.medicine", 
+    "fields": {
+      "tags": "", 
+      "name": "ibuprofen", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "diseases.medicine", 
+    "fields": {
+      "tags": "", 
+      "name": "Acetaminophen", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "diseases.medicine", 
+    "fields": {
+      "tags": "", 
+      "name": "Do a X-Ray, consult a Doctor", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "diseases.medicine", 
+    "fields": {
+      "tags": "", 
+      "name": "Acetaminophen - High Fever", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 9, 
+    "model": "diseases.medicine", 
+    "fields": {
+      "tags": "", 
+      "name": "Plenty of Fluids", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 10, 
+    "model": "diseases.medicine", 
+    "fields": {
+      "tags": "", 
+      "name": "Diphtheria Antitoxin pushed to muscles", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 11, 
+    "model": "diseases.medicine", 
+    "fields": {
+      "tags": "", 
+      "name": "Xolair", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 12, 
+    "model": "diseases.medicine", 
+    "fields": {
+      "tags": "", 
+      "name": "Penicilin", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 13, 
+    "model": "diseases.medicine", 
+    "fields": {
+      "tags": "", 
+      "name": "Aspirin", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 14, 
+    "model": "diseases.medicine", 
+    "fields": {
+      "tags": "", 
+      "name": "Zinc Supplements", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 15, 
+    "model": "diseases.medicine", 
+    "fields": {
+      "tags": "", 
+      "name": "No Antibiotics (unless recommended by Doctor)", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 16, 
+    "model": "diseases.medicine", 
+    "fields": {
+      "tags": "", 
+      "name": "Vitamin C", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 17, 
+    "model": "diseases.medicine", 
+    "fields": {
+      "tags": "", 
+      "name": "Antibiotics - Metronidazole", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 18, 
+    "model": "diseases.medicine", 
+    "fields": {
+      "tags": "", 
+      "name": "Erythromycin", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 19, 
+    "model": "diseases.medicine", 
+    "fields": {
+      "tags": "", 
+      "name": "Lung Function Test", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 20, 
+    "model": "diseases.medicine", 
+    "fields": {
+      "tags": "", 
+      "name": "Consult a Doctor and do needed tests", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 21, 
+    "model": "diseases.medicine", 
+    "fields": {
+      "tags": "", 
+      "name": "Paracetamol", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 22, 
+    "model": "diseases.medicine", 
+    "fields": {
+      "tags": "", 
+      "name": "Consult a Orthopeadic", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 23, 
+    "model": "diseases.medicine", 
+    "fields": {
+      "tags": "", 
+      "name": "Consult Doctor for different other fever's", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 24, 
+    "model": "diseases.medicine", 
+    "fields": {
+      "tags": "", 
+      "name": "Surgery", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 25, 
+    "model": "diseases.medicine", 
+    "fields": {
+      "tags": "", 
+      "name": "Intravenous fluids", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 26, 
+    "model": "diseases.medicine", 
+    "fields": {
+      "tags": "", 
+      "name": "Consult a Doctor - Do a blood test", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "diseases.disease", 
+    "fields": {
+      "remedies": [
+        1, 
+        2, 
+        9, 
+        19, 
+        23
+      ], 
+      "severity": 8, 
+      "tags": "abdominal cramps,diarrhea,fatigue,excessive gas,bloody stool,fever,vommiting", 
+      "medicines": [
+        17
+      ], 
+      "name": "Amebiasis", 
+      "summary": "Amebiasis is an intestinal infection", 
+      "description": "It happens if food or water contaminated with 'Entamoeba Histolytica' is consumed"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "diseases.disease", 
+    "fields": {
+      "remedies": [
+        4, 
+        14, 
+        36, 
+        37
+      ], 
+      "severity": 9, 
+      "tags": "severe abdominal pain(mainly left),loss of apetite,nausea,vommiting", 
+      "medicines": [
+        24
+      ], 
+      "name": "Appendicitis", 
+      "summary": "Its a medical condition in which your vermiform appendix gets inflamed", 
+      "description": "The inflamation is due to a infection and recommends surgerical opinions ASAP"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "diseases.disease", 
+    "fields": {
+      "remedies": [
+        16, 
+        24, 
+        25, 
+        29, 
+        34
+      ], 
+      "severity": 8, 
+      "tags": "joint pain,join swell,reduced movability of a joint,stiffness", 
+      "medicines": [
+        5, 
+        6, 
+        22
+      ], 
+      "name": "Arthritis", 
+      "summary": "These are mainly diseases involving imflammation of body joints", 
+      "description": "Arthritis involves cartialage breakdown. There are many different forms of it"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "diseases.disease", 
+    "fields": {
+      "remedies": [
+        10, 
+        13, 
+        15, 
+        18, 
+        26, 
+        35
+      ], 
+      "severity": 8, 
+      "tags": "respiratory troubles,sweating without a cause,shortness of breath,rapid pulse", 
+      "medicines": [
+        1, 
+        2, 
+        4, 
+        11
+      ], 
+      "name": "Asthma", 
+      "summary": "Swelling of airways of lungs leading to narrowing of passage causing shortness of breath and coughing", 
+      "description": "Asthma attacks are triggered by allergens or triggers, which are allery causing substances."
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "diseases.disease", 
+    "fields": {
+      "remedies": [
+        7, 
+        8, 
+        21, 
+        28, 
+        35
+      ], 
+      "severity": 8, 
+      "tags": "fatigue,fever,short of breath,chest discomfort", 
+      "medicines": [
+        3, 
+        7, 
+        9, 
+        19
+      ], 
+      "name": "Bronchitis", 
+      "summary": "Inflammation of the mucus membrane of the bronchi, leading to viral respiratory infection", 
+      "description": "Mainly of two types, acute and chronic bronchitis. It first effects nose, sinus, throat and moves to lungs."
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "diseases.disease", 
+    "fields": {
+      "remedies": [
+        15, 
+        20, 
+        30, 
+        31
+      ], 
+      "severity": 10, 
+      "tags": "nasal congestion,runny nose,scratchy throat,sneezing,sore throat,headache,loss of apetite", 
+      "medicines": [
+        14, 
+        15, 
+        16
+      ], 
+      "name": "Common Cold", 
+      "summary": "Viral infecticious disease of upper respiratory system, specially nose.", 
+      "description": "Commond cold spreads through cold sneezes, coughs and through infecticious tiny air droplets around the person."
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "diseases.disease", 
+    "fields": {
+      "remedies": [
+        6, 
+        32
+      ], 
+      "severity": 8, 
+      "tags": "high quotient of pain,fatigue,severe headache,joint and muscle pain,high fever,reddish pink rashes in body,stomach pain", 
+      "medicines": [
+        8, 
+        26
+      ], 
+      "name": "Dengue", 
+      "summary": "Infection caused by Dengue virus, which is spread and transmitted by mosquitos.", 
+      "description": "Caused by one of the four different but related viruses. Mainly spread by byting of mosquito Aedes Aegypti."
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "diseases.disease", 
+    "fields": {
+      "remedies": [
+        3, 
+        5, 
+        22
+      ], 
+      "severity": 4, 
+      "tags": "bluis coloration of skin,bloody, watery drainage of nose,breathing problems,drooling,fever,hoarseness,skin lesions", 
+      "medicines": [
+        10, 
+        12, 
+        18
+      ], 
+      "name": "Diphtheria", 
+      "summary": "Acute infectitious disease caused by bacteria Corynebacterium diphtheriae.", 
+      "description": "Upper respiratory track illness spread by direct physical contact or breathing aerosolized secretion of other infected individuals."
+    }
+  }, 
+  {
+    "pk": 9, 
+    "model": "diseases.disease", 
+    "fields": {
+      "remedies": [
+        27, 
+        33, 
+        38, 
+        39
+      ], 
+      "severity": 8, 
+      "tags": "abdominal pain or cramps,acute diarhea,bloody stool,sunken eyeballs,low fever,appetite loss", 
+      "medicines": [
+        20, 
+        25
+      ], 
+      "name": "Gastroenteritis", 
+      "summary": "It is a illness characterized by inflammation of the gastrointestinal tract resulting in some combination of diarrhea, vomiting, and abdominal pain and cramping", 
+      "description": "It can be caused due to bacterial, viral, parasitic attack or transmissions from contaminated water or use of personal objects."
+    }
+  }, 
+  {
+    "pk": 10, 
+    "model": "diseases.disease", 
+    "fields": {
+      "remedies": [
+        11, 
+        12, 
+        17, 
+        34
+      ], 
+      "severity": 10, 
+      "tags": "sudden high rise in body temperature,loss of apettite,body weakness,dehydration,headaches,muscle aches", 
+      "medicines": [
+        5, 
+        6, 
+        13, 
+        21, 
+        23
+      ], 
+      "name": "Fever", 
+      "summary": "Elevated temperature; Hyperthermia; Pyrexia. Fever is the temporary increase in the body's temperature in response to some disease or illness.", 
+      "description": "An adult probably has a fever when the temperature is above 98.5 - 99 \u00b0F"
+    }
+  }, 
+  {
+    "pk": 11, 
+    "model": "diseases.disease", 
+    "fields": {
+      "remedies": [], 
+      "severity": 0, 
+      "tags": "", 
+      "medicines": [], 
+      "name": "dsdsf", 
+      "summary": "dsfdsf", 
+      "description": "Hello world\r\n==================\r\n"
+    }
+  }, 
+  {
+    "pk": 12, 
+    "model": "diseases.disease", 
+    "fields": {
+      "remedies": [
+        4, 
+        5
+      ], 
+      "severity": 0, 
+      "tags": "", 
+      "medicines": [
+        4
+      ], 
+      "name": "dsfkjdhskjhfdks", 
+      "summary": "sdfkljdslfj  ;lsdjf;l\r\n\r\nds;lfj;lsdfj \r\n'dsfj ;sdfj;dsf;ljds fl", 
+      "description": "sdfjdslfj \r\n\r\nsdlfjds f\r\n\r\ndsklfjldksjf \r\n"
+    }
+  }, 
+  {
+    "pk": 13, 
+    "model": "diseases.disease", 
+    "fields": {
+      "remedies": [], 
+      "severity": 0, 
+      "tags": "", 
+      "medicines": [], 
+      "name": "sfdjsfkldjsfdklsjfl", 
+      "summary": "", 
+      "description": ""
+    }
+  }, 
+  {
+    "pk": 14, 
+    "model": "diseases.disease", 
+    "fields": {
+      "remedies": [
+        6, 
+        9, 
+        10, 
+        11
+      ], 
+      "severity": 2, 
+      "tags": "fever,vommiting", 
+      "medicines": [
+        3, 
+        5, 
+        6
+      ], 
+      "name": "sidhkdashf", 
+      "summary": "dlswfh l ldjsklfj jlsdfjl jkl dsljf dklsfjkl dsjfkldjs fkljdsfkl djsdklsjfl dsklfjklj dsfjklj dsf jl dsflkjlj sdfjlj dsf dklsjflkj dlsfjl kldsfj kldsjfljf dklsfjkl dsfjkldjsf jdklsfjlj jsdfljkldsjflk jdlsfjljdfsj jldsfjl", 
+      "description": "dfklgjdf kldfjgljdf g jldfjgklj ldfjglj lkjdfg ljdfgljkljdfkl g jdfklgjkldfjg j dfljgjdfklgj dfgklj dfg klj dfljgljgfdlj gdfjgkljdfklgjkljlgfjdjl dfgjljdfg kl ldjfgljlj djfgkljljdf  jdfgkljdfgj dfgjkldfjgkljdfg dfjgkljdfgj dfjgldfjg ljdfgljldfjgljdfg jldfkgjldfjkljlj dfjgkljdfgjjldgf ljjdfl jglkjdfgj ldfjgkdfjglkj\r\n\r\n\r\ndfklgjlkj dfg jkljdfg jlkdfgjkljdfgj dfklgjjldgfkj dfjgkljdfg jdfjkldshjflj ljdfskljkldjsgfkljkldgfj kljdslfj skldjgfj dfklgj lkdfjgljl dfgkljkldfjgkljdfklgjkl dfklgjkldfjgkljdfklg jkldfjklgjkldfjkljdfklgjlj"
+    }
+  }
+]
