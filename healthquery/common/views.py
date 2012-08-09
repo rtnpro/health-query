@@ -1,1 +1,18 @@
-# Create your views here.
+from django.core.urlresolvers import reverse
+from django.http import HttpResponseRedirect
+from django.contrib.auth import logout as _logout
+from django.conf import settings
+
+
+def login(request):
+    request.session['next'] = request.GET.get('next',
+            settings.LOGIN_REDIRECT_URL)
+    return HttpResponseRedirect(reverse('socialauth_begin',
+        args=['google-oauth2'])
+    )
+
+
+def logout(request):
+    redirect_to = request.GET.get('next', settings.LOGOUT_REDIRECT_URL)
+    _logout(request)
+    return HttpResponseRedirect(redirect_to)

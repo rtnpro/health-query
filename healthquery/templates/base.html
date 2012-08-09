@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load url from future %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -58,6 +59,11 @@
                   <li><a href="#"><strong>Locate</strong></a></li>
                   <li><a href="#"><strong>Blog</strong></a></li>
                   <li><a href="#"><strong>Help</strong></a></li>
+                  {% if user.is_authenticated %}
+                  <li><a href="{% block logout_url %}{% url "logout" %}?next={{request.path}}{% endblock %}"><strong>Logout</strong></a></li>
+                  {% else %}
+                  <li><a href="{% block login_url %}{% url "login" %}{% endblock %}"><strong>Login</strong></a></li>
+                  {% endif %}
                 </ul>
               </div><!--/.nav-collapse -->
             </div>
