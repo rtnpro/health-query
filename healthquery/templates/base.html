@@ -1,5 +1,5 @@
 {% load staticfiles %}
-{% load url from future %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -55,14 +55,14 @@
               <a class="brand" href="/">healthQuery</a>
               <div class="nav-collapse">
                 <ul class="nav pull-right">
-                  <li><a href="#"><strong>Explore</strong></a></li>
-                  <li><a href="#"><strong>Locate</strong></a></li>
-                  <li><a href="#"><strong>Blog</strong></a></li>
-                  <li><a href="#"><strong>Help</strong></a></li>
+                  <li><a href="#"><strong>{% trans "Explore" %}</strong></a></li>
+                  <li><a href="#"><strong>{% trans "Locate" %}</strong></a></li>
+                  <li><a href="#"><strong>{% trans "Blog" %}</strong></a></li>
+                  <li><a href="{% url support %}"><strong>{% trans "Support" %}</strong></a></li>
                   {% if user.is_authenticated %}
-                  <li><a href="{% block logout_url %}{% url "logout" %}?next={{request.path}}{% endblock %}"><strong>Logout</strong></a></li>
+                  <li><a href="{% block logout_url %}{% url logout %}?next={{request.path}}{% endblock %}"><strong>{% trans "Logout" %}</strong></a></li>
                   {% else %}
-                  <li><a href="{% block login_url %}{% url "login" %}{% endblock %}"><strong>Login</strong></a></li>
+                  <li><a href="{% block login_url %}{% url login %}{% endblock %}"><strong>{% trans "Login" %}</strong></a></li>
                   {% endif %}
                 </ul>
               </div><!--/.nav-collapse -->

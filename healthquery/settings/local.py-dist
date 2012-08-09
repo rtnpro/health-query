@@ -28,3 +28,5 @@ SECRET_KEY = 'SECRET_KEY'
 # django-social-auth settings
 GOOGLE_OAUTH2_CLIENT_ID = ''
 GOOGLE_OAUTH2_CLIENT_SECRET = ''
+
+SUPPORT_FORUM_NAME = 'healthquery'
