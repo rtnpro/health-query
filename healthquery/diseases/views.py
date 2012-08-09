@@ -6,6 +6,7 @@ from healthquery.diseases.forms import DiseaseForm
 from healthquery.diseases.models import *
 from tagging.models import TaggedItem
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth.decorators import login_required
 
 
 def _create_update_disease(request, disease_id=None):
@@ -25,6 +26,7 @@ def _create_update_disease(request, disease_id=None):
             context_instance=RequestContext(request))
 
 
+@login_required
 def disease_add(request):
     return _create_update_disease(request)
 

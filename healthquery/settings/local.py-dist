@@ -24,3 +24,7 @@ DATABASES = {
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'SECRET_KEY'
+
+# django-social-auth settings
+GOOGLE_OAUTH2_CLIENT_ID = ''
+GOOGLE_OAUTH2_CLIENT_SECRET = ''
