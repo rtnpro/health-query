@@ -128,8 +128,12 @@ INSTALLED_APPS = (
     'crispy_forms',
     'django_markdown',
     'social_auth',
+    'gravatar',
+    'django_google_maps',
     'healthquery.diseases',
     'healthquery.common',
+    'healthquery.people',
+    'healthquery.places'
 )
 
 # A sample logging configuration. The only tangible logging
