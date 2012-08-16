@@ -20,9 +20,10 @@ def _create_update_disease(request, disease_id=None):
             disease = disease_form.save()
             return HttpResponseRedirect(reverse('disease_detail',
                 args=[disease.id]))
-    form = DiseaseForm()
+    else:
+        disease_form = DiseaseForm()
     return render_to_response('diseases/disease_form.html',
-            {'form': form},
+            {'form': disease_form},
             context_instance=RequestContext(request))
 
 

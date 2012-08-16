@@ -14,15 +14,15 @@ class DiseaseForm(forms.ModelForm):
         helper.form_class = 'form-vertical'
         helper.form_show_errors = True
         helper.layout = Layout(
-            Field('name', css_class='input-xlarge'),
+            Field('name', css_class='input-xxlarge'),
             Field('summary', rows="3", css_class='input-xxlarge'),
             Field('description', rows="10", css_class='input-xxlarge'),
             Field('severity', css_class="chzn-select"),
-            Field('remedies', css_class="input-xlarge chzn-select"),
-            Field('medicines', css_class="input-xlarge chzn-select"),
-            Field('tags', css_class="inpul-xlarge"),
+            Field('remedies', css_class="input-xxlarge chzn-select"),
+            Field('medicines', css_class="input-xxlarge chzn-select"),
+            Field('tags', css_class="inpul-xxlarge"),
             FormActions(
-                Submit('save_changes', 'Save changes', css_class="btn-primary"),
+                Submit('save_changes', 'Submit', css_class="btn-primary btn-large"),
                 css_class="",
             )
         )
