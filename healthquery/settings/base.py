@@ -119,9 +119,10 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.markup',
     # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
+    'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+    'django.contrib.gis',
     'south',
     'tagging',
     'haystack',
@@ -130,6 +131,7 @@ INSTALLED_APPS = (
     'social_auth',
     'gravatar',
     'django_google_maps',
+    'address',
     'healthquery.diseases',
     'healthquery.common',
     'healthquery.people',

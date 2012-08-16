@@ -7,8 +7,8 @@ from healthquery.common.forms import HealthQuerySearchForm
 from healthquery.diseases.models import Disease
 
 # Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
+from django.contrib import admin
+admin.autodiscover()
 
 sqs = SearchQuerySet().models(Disease)
 
@@ -21,7 +21,7 @@ urlpatterns = patterns('',
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    # url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'healthquery.views.home'),
     url(r'^diseases/', include('healthquery.diseases.urls')),
     url('^markdown/', include( 'django_markdown.urls')),
@@ -38,7 +38,7 @@ urlpatterns = patterns('',
         name='login'),
     url(r'', include('social_auth.urls')),
     url(r'^support/$', 'healthquery.common.views.support',
-        name='support')
+        name='support'),
 )
 
 urlpatterns += staticfiles_urlpatterns()

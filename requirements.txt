@@ -5,6 +5,7 @@ distribute==0.6.24
 django-appconf==0.5
 django-crispy-forms==1.1.4
 -e git+https://github.com/toastdriven/django-haystack.git@edb3ca5c3723fde9f0e7a51762e203d899ceed58#egg=django_haystack-dev
+-e git://github.com/furious-luke/django-address.git@f6deb168854bc4bce09ea65722ec2312da334008#egg=django_address-dev
 django-markdown==0.1.0
 django-social-auth==0.7.2
 django-staticfiles==1.2.1

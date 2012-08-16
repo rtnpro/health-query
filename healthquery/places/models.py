@@ -1,8 +1,9 @@
 from django.db import models
 from django_google_maps import fields as map_fields
+from healthquery.common.models import BaseAddressModel
 
 
-class Place(models.Model):
+class Place(BaseAddressModel):
     CHOICES = (
         ('HP', 'Hospital'),
         ('PH', 'Pharmacy'),
@@ -10,5 +11,3 @@ class Place(models.Model):
         ('PC', 'Private Chamber')
     )
     place_type = models.CharField(max_length="2", choices=CHOICES)
-    address = map_fields.AddressField(max_length=200)
-    geolocation = map_fields.GeoLocationField(max_length=100)
