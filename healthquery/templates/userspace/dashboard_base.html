@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% block logout_url %}{% url logout %}{% endblock %}
+
 {% block content_header %}
 <div style="margin-bottom:10px;">
     <h2>{{ request.user.username }}'s dashboard</h2>

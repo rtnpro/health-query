@@ -19,7 +19,6 @@ def login(request):
     )
 
 
-@login_required
 def logout(request):
     redirect_to = request.GET.get('next', settings.LOGOUT_REDIRECT_URL)
     _logout(request)
