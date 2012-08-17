@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block extra_head %}
+<style type="text/css">
+    #hqMaps img {
+        max-width: none;
+    }
+</style>
+{% endblock %}
+
+{% block content_header %}
+    <h2><em>health</em>Query Locate</h2>
+{% endblock %}
+
+{% block content %}
+<div id="search-box">
+    <form class="form-vertical">
+        <fieldset>
+            <div class="row">
+                <div class="span6">
+                    <input type="text" class="input-xxlarge">
+                </div>
+                <div class="span2">
+                    <select multiple data-placeholder="Filter by..." class="chzn-select input-xlarge">
+                        <option>Doctor</option>
+                        <option>Pharmacy</option>
+                        <option>Hospital</option>
+                        <option>Nursing home</option>
+                    </select>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
+<div id="hqMaps" style="height:500px"></div>
+{% endblock %}
+
+{% block extrajs %}
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="{% static "js/gmap3.min.js" %}"></script>
+<script>
+$(function(){
+    var coords = [];
+    {% if request.user.is_authenticated %}
+        coords = [{{ request.user.profile.geometry.y }}, {{ request.user.profile.geometry.x }}];
+    {% endif %}
+    gmap3_initial_dict = {
+        action: 'init',
+        options: {}
+    };
+    if (coords.length == 2){
+        gmap3_initial_dict.options['zoom'] = 11;
+        gmap3_initial_dict.options['center'] = coords;
+    }
+    $('#hqMaps').gmap3(gmap3_initial_dict);
+});
+</script>
+{% endblock %}

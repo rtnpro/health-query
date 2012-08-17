@@ -62,7 +62,7 @@
                   <li{% if site_section.0 == "home" or site_section.0 == "accounts" %} class="active"{% endif %}><a href="{% url user_dashboard %}"><strong>@{{ user.username }}</strong></a></li>
                   {% endif %}
                   <li><a href="#"><strong>{% trans "Explore" %}</strong></a></li>
-                  <li{% if site_section.0 == "locate" %} class="active"{% endif %}><a href="#"><strong>{% trans "Locate" %}</strong></a></li>
+                  <li{% if site_section.0 == "locate" %} class="active"{% endif %}><a href="{% url locate %}"><strong>{% trans "Locate" %}</strong></a></li>
                   <li><a href="#"><strong>{% trans "Blog" %}</strong></a></li>
                   <li><a href="{% url support %}"><strong>{% trans "Support" %}</strong></a></li>
                   {% if user.is_authenticated %}
@@ -78,7 +78,7 @@
     </div>
 
     <div class="container">
-        <div class="content-header span9 offset1">
+        <div class="content-header span9 offset1" style="margin-bottom:10px;">
           {% block content_header %}{% endblock %}
         </div>
         <div class="content span9 offset1">

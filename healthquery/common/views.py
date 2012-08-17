@@ -9,3 +9,8 @@ def support(request):
         {'forum_name': settings.SUPPORT_FORUM_NAME},
         context_instance=RequestContext(request)
     )
+
+def locate(request):
+    """Render google maps to locate doctors and places."""
+    return render_to_response('locate/locate.html',
+            context_instance=RequestContext(request))

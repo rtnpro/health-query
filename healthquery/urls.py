@@ -36,6 +36,8 @@ urlpatterns = patterns('',
     url(r'', include('healthquery.userspace.urls')),
     url(r'^support/$', 'healthquery.common.views.support',
         name='support'),
+    url(r'^locate/$', 'healthquery.common.views.locate',
+        name='locate')
 )
 
 urlpatterns += staticfiles_urlpatterns()
