@@ -38,6 +38,9 @@
         .hero-unit{
             text-align: center;
         }
+        .input-xxlarge.dual{
+          width: 505px;
+        }
     </style>
   </head>
 
@@ -55,6 +58,9 @@
               <a class="brand" href="/">healthQuery</a>
               <div class="nav-collapse">
                 <ul class="nav pull-right">
+                  {% if request.user.is_authenticated %}
+                  <li><a href="{% url user_dashboard %}"><strong>@{{ user.username }}</strong></a></li>
+                  {% endif %}
                   <li><a href="#"><strong>{% trans "Explore" %}</strong></a></li>
                   <li><a href="#"><strong>{% trans "Locate" %}</strong></a></li>
                   <li><a href="#"><strong>{% trans "Blog" %}</strong></a></li>
@@ -72,8 +78,11 @@
     </div>
 
     <div class="container">
+        <div class="content-header span9 offset1">
+          {% block content_header %}{% endblock %}
+        </div>
         <div class="content span9 offset1">
-            {% block content %}{% endblock %}
+          {% block content %}{% endblock %}
         </div>
     </div> <!-- /container -->
 

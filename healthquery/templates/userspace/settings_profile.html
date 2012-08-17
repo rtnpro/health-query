@@ -1,0 +1,31 @@
+{% extends "userspace/settings_base.html" %}
+{% load crispy_forms_tags %}
+
+{% block settings_main %}
+    <div id="profile" class="span7">
+        <div id="readonly" class="form-vertical">
+            <fieldset>
+                <div class="control-group">
+                    <label class="control-label"><strong>Name</strong></label>
+                    <div class="controls">
+                        <span class="input-xxlarge dual uneditable-input">{{ profile.name }}</span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label"><strong>Username</strong></label>
+                    <div class="controls">
+                        <span class="input-xxlarge dual uneditable-input">{{ profile.username }}</span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label"><strong>Email</strong></label>
+                    <div class="controls">
+                        <span class="input-xxlarge dual uneditable-input">{{ profile.email }}</span>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <hr>
+        {% crispy form form.helper %}
+    </div>
+{% endblock %}

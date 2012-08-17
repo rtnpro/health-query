@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content_header %}
+<div style="margin-bottom:10px;">
+    <h2>{{ request.user.username }}'s dashboard</h2>
+</div>
+{% endblock %}
+{% block content %}
+    <ul class="nav nav-tabs">
+        {% url user_dashboard as user_dashboard_url %}
+        <li {% ifequal request.path user_dashboard_url %}class="active"{% endifequal %}>
+            <a href="{{ user_dashboard_url }}">Overview</a>
+        </li>
+        <li {% ifequal site_section.0 "accounts" %}class="active"{% endifequal %}>
+            <a href="{% url user_settings_profile %}">Settings</a>
+        </li>
+    </ul>
+    {% block content_main %}{% endblock %}
+{% endblock %}

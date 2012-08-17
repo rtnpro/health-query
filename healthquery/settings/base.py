@@ -96,6 +96,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'social_auth.context_processors.social_auth_backends',
     'social_auth.context_processors.social_auth_by_type_backends',
     'social_auth.context_processors.social_auth_login_redirect',
+    'healthquery.common.context_processors.site_section',
 )
 
 ROOT_URLCONF = 'healthquery.urls'
@@ -135,7 +136,8 @@ INSTALLED_APPS = (
     'healthquery.diseases',
     'healthquery.common',
     'healthquery.people',
-    'healthquery.places'
+    'healthquery.places',
+    'healthquery.userspace',
 )
 
 # A sample logging configuration. The only tangible logging

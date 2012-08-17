@@ -1,0 +1,23 @@
+{% extends "userspace/dashboard_base.html" %}
+
+{% block content_main %}
+<div id="settings-container" class="row">
+    <div id="settings-sidebar" class="span2">
+        {% block settings_sidebar %}
+            <ul class="nav nav-list">
+                <li class="nav-header">Settings</li>
+                <li{% if site_section.0 == "accounts" and site_section.1 == "settings" and site_section.2 == "profile" %} class="active"{% endif %}>
+                    <a href="{% url user_settings_profile %}">
+                        <i class="icon-user"></i> Profile
+                    </a>
+                </li>
+            </ul>
+        {% endblock %}
+
+    </div>
+    <div id="settings-main" class="span7">
+        {% block settings_main %}
+        {% endblock %}
+    </div>
+</div>
+{% endblock %}

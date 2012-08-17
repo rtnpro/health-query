@@ -32,11 +32,8 @@ urlpatterns = patterns('',
         form_class=HealthQuerySearchForm
     ), name="health_query_search"),
     url(r'^search/', include('haystack.urls')),
-    url(r'^accounts/logout/$', 'healthquery.common.views.logout',
-        name='logout'),
-    url(r'^accounts/login/$', 'healthquery.common.views.login',
-        name='login'),
     url(r'', include('social_auth.urls')),
+    url(r'', include('healthquery.userspace.urls')),
     url(r'^support/$', 'healthquery.common.views.support',
         name='support'),
 )
