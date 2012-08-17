@@ -28,6 +28,7 @@ class Day(models.Model):
     )
     name = models.CharField(max_length=3, choices=DAYS)
 
+
 class Timing(models.Model):
     doctor_location = models.ForeignKey(DoctorLocation)
     available_from = models.TimeField()
