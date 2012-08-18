@@ -1,0 +1,7 @@
+<div class="medicine-details">
+    {% if medicine.details %}
+        {{ medicine.details_as_html }}
+    {% else %}
+        No description is available.
+    {% endif %}
+</div>

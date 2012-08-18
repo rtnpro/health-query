@@ -23,7 +23,7 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'healthquery.views.home'),
-    url(r'^diseases/', include('healthquery.diseases.urls')),
+    url(r'', include('healthquery.diseases.urls')),
     url('^markdown/', include( 'django_markdown.urls')),
     url(r'^search/$', search_view_factory(
         view_class=SearchView,

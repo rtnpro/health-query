@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 {% load i18n %}
 
 {% block content %}
@@ -10,31 +11,26 @@
         <h2>{{ disease.name }}</h2>
     </li>
 </ul>
-<section id="summary">
+<section id="summary-section">
     <div class="page-header">
         <h2>{% trans "Summary" %}</h2>
     </div>
-    <div id="summary" class="row">
+    <div id="summary-container" class="row">
         <div class="span1 well" style="text-align:center;">
             <p>Severity</p>
             <h1>{{ disease.severity }}</h1>
         </div>
         <div class="span7">
-            {{ disease.summary }}
-        </div>
-    </div>
-</section>
-<section id="symptoms">
-    <div class="page-header">
-        <h2>{% trans "Symptoms" %}</h2>
-    </div>
-    <div id="summary" class="row">
-        <div class="span9">
-            {% for symptom in disease.tagsobj.all %}
-            <span class="btn"><a href="#">{{ symptom.name }}</a></span> 
-            {% empty %}
-                {% trans "No symptom listed yet." %}
-            {% endfor %}
+            <div id="summary">
+                {{ disease.summary }}
+            </div>
+            <div id="symptoms" style="margin-top:10px;">
+                {% for symptom in disease.tagsobj.all %}
+                <span class="label label-info"><i class="icon-white icon-tag"></i> {{ symptom.name }}</span> 
+                {% empty %}
+                    {% trans "No symptom listed yet." %}
+                {% endfor %}                
+            </div>
         </div>
     </div>
 </section>
@@ -54,13 +50,26 @@
     </div>
     <div id="summary" class="row">
         <div class="span9">
-            <ul class="unstyled">
+            <div class="accordion" id="accordion-remedies">
                 {% for remedy in disease.remedies.all %}
-                <li><a href="#">{{ remedy.name }}</a></li>
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-remedies" href="#remedy{{ remedy.id }}">
+                      {{ remedy.name }}
+                    </a>
+                  </div>
+                  <div id="remedy{{ remedy.id }}" fetch-url="{% url ajax_get_remedy_details remedy.id %}" class="accordion-body collapse" style="height: 0px; ">
+                    <div class="accordion-inner" not-loaded="true">
+                        <div style="text-align:center;">
+                            <img src="{% static "img/loading.gif" %}"/>
+                        </div>
+                    </div>
+                  </div>
+                </div>
                 {% empty %}
                     {% trans "No remedy listed yet." %}
                 {% endfor %}
-            </ul>
+            </div>
         </div>
     </div>
 </section>
@@ -70,14 +79,53 @@
     </div>
     <div id="summary" class="row">
         <div class="span9">
-            <ul class="unstyled">
+            <div class="accordion" id="accordion-medicines">
                 {% for medicine in disease.medicines.all %}
-                <li><a href="#">{{ medicine.name }}</a></li>
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-medicines" href="#medicine{{ medicine.id }}">
+                      {{ medicine.name }}
+                    </a>
+                  </div>
+                  <div id="medicine{{ medicine.id }}" fetch-url="{% url ajax_get_medicine_details medicine.id %}" class="accordion-body collapse" style="height: 0px; ">
+                    <div class="accordion-inner" not-loaded="true">
+                        <div style="text-align:center;">
+                            <img src="{% static "img/loading.gif" %}"/>
+                        </div>
+                    </div>
+                  </div>
+                </div>
                 {% empty %}
-                    {% trans "No remedy listed yet." %}
+                    {% trans "No medicine listed yet." %}
                 {% endfor %}
-            </ul>
+            </div>
         </div>
     </div>
 </section>
+{% endblock %}
+
+{% block extrajs %}
+    <script>
+        $(function(){
+            $('.accordion').on('show', function(e){
+                var $target = $(e.target);
+                var url = $target.attr('fetch-url');
+                var $accordion_inner = $('.accordion-inner', $target);
+                if ($accordion_inner.attr('not-loaded')){
+                    $.ajax({
+                        url: url,
+                        success: function(data){
+                            $accordion_inner.html(data);
+                            $accordion_inner.removeAttr('not-loaded');
+                            makeEditable($('.editable', $accordion_inner));
+                        }
+                    });
+                }
+            });
+
+            $('.editable').each(function(index, element){
+                makeEditable(element);
+            });
+        });
+    </script>
 {% endblock %}

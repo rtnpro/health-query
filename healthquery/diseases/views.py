@@ -1,7 +1,7 @@
 from django.template import RequestContext
 from django.core.urlresolvers import reverse
 from django.shortcuts import render_to_response, get_object_or_404
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from healthquery.diseases.forms import DiseaseForm
 from healthquery.diseases.models import *
 from tagging.models import TaggedItem
@@ -37,3 +37,15 @@ def disease_detail(request, disease_id):
     return render_to_response('diseases/disease_detail.html',
             {'disease': disease},
             context_instance=RequestContext(request))
+
+
+def ajax_get_remedy_details(request, remedy_id):
+    remedy = get_object_or_404(Remedy, id=remedy_id)
+    return render_to_response("diseases/ajax_remedy_details.html",
+        {'remedy': remedy}, context_instance=RequestContext(request))
+
+
+def ajax_get_medicine_details(request, medicine_id):
+    medicine = get_object_or_404(Medicine, id=medicine_id)
+    return render_to_response("diseases/ajax_medicine_details.html",
+        {'medicine': medicine}, context_instance=RequestContext(request))
