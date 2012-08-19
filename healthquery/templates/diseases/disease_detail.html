@@ -2,6 +2,40 @@
 {% load staticfiles %}
 {% load i18n %}
 
+{% block extra_head %}
+    <style type="text/css">
+        .editable:hover > .editable-target {
+            border: 2px solid #EDC648;
+            border-radius: 5px;
+        }
+        .editable-target {
+            border: 1px;
+        }
+        .edit-control-buttons {
+            visibility: hidden;
+            text-decoration: none;
+        }
+        a.editable:hover {
+            text-decoration: none;
+        }
+        a.editable:hover .editable-target {
+            text-decoration: underline;
+        }
+        .editable:hover  .edit-control-buttons.inline {
+            display: inline;
+            visibility: visible;
+            padding-left: 3px;
+        }
+        .editable:hover  .edit-control-buttons.block {
+            visibility: visible;
+            display: block;
+        }
+        .edit-control-buttons .icon-ok,.icon-remove {
+            visibility: hidden;
+        }
+    </style>
+{% endblock %}
+
 {% block content %}
 <ul class="breadcrumb">
     <li>
@@ -21,8 +55,15 @@
             <h1>{{ disease.severity }}</h1>
         </div>
         <div class="span7">
-            <div id="summary">
-                {{ disease.summary }}
+            <div id="summary" class="editable">    
+                <span class="edit-control-buttons block">
+                    <i class="icon-edit"></i>
+                    <i class="icon-ok"></i>
+                    <i class="icon-remove"></i>    
+                </span>
+                <div class="editable-target">
+                    {{ disease.summary }}
+                </div>
             </div>
             <div id="symptoms" style="margin-top:10px;">
                 {% for symptom in disease.tagsobj.all %}
@@ -39,8 +80,15 @@
         <h2>{% trans "Description" %}</h2>
     </div>
     <div id="summary" class="row">
-        <div class="span9">
-            {{ disease.description }}
+        <div class="span9 editable">
+            <span class="edit-control-buttons block">
+                <i class="icon-edit"></i>
+                <i class="icon-ok"></i>
+                <i class="icon-remove"></i>    
+            </span>
+            <div class="editable-target">
+                {{ disease.description }}
+            </div>
         </div>
     </div>
 </section>
@@ -54,12 +102,17 @@
                 {% for remedy in disease.remedies.all %}
                 <div class="accordion-group">
                   <div class="accordion-heading">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-remedies" href="#remedy{{ remedy.id }}">
-                      {{ remedy.name }}
+                    <a class="accordion-toggle editable" data-toggle="collapse" data-parent="#accordion-remedies" href="#remedy{{ remedy.id }}">  
+                        <span class="editable-target">{{ remedy.name }}</span>
+                        <span class="edit-control-buttons inline">
+                            <i class="icon-edit"></i>
+                            <i class="icon-ok"></i>
+                            <i class="icon-remove"></i>
+                        </span>
                     </a>
                   </div>
                   <div id="remedy{{ remedy.id }}" fetch-url="{% url ajax_get_remedy_details remedy.id %}" class="accordion-body collapse" style="height: 0px; ">
-                    <div class="accordion-inner" not-loaded="true">
+                    <div class="accordion-inner editable" not-loaded="true">
                         <div style="text-align:center;">
                             <img src="{% static "img/loading.gif" %}"/>
                         </div>
@@ -83,12 +136,17 @@
                 {% for medicine in disease.medicines.all %}
                 <div class="accordion-group">
                   <div class="accordion-heading">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-medicines" href="#medicine{{ medicine.id }}">
-                      {{ medicine.name }}
+                    <a class="accordion-toggle editable" data-toggle="collapse" data-parent="#accordion-medicines" href="#medicine{{ medicine.id }}">  
+                        <span class="editable-target">{{ medicine.name }}</span>
+                        <span class="edit-control-buttons inline">
+                            <i class="icon-edit"></i>
+                            <i class="icon-ok"></i>
+                            <i class="icon-remove"></i>
+                        </span>
                     </a>
                   </div>
                   <div id="medicine{{ medicine.id }}" fetch-url="{% url ajax_get_medicine_details medicine.id %}" class="accordion-body collapse" style="height: 0px; ">
-                    <div class="accordion-inner" not-loaded="true">
+                    <div class="accordion-inner editable" not-loaded="true">
                         <div style="text-align:center;">
                             <img src="{% static "img/loading.gif" %}"/>
                         </div>
@@ -116,15 +174,10 @@
                         url: url,
                         success: function(data){
                             $accordion_inner.html(data);
-                            $accordion_inner.removeAttr('not-loaded');
-                            makeEditable($('.editable', $accordion_inner));
+                            $accordion_inner.removeAttr('not-loaded');;
                         }
                     });
                 }
-            });
-
-            $('.editable').each(function(index, element){
-                makeEditable(element);
             });
         });
     </script>

@@ -1,4 +1,11 @@
-<div class="medicine-details">
+<span class="edit-control-buttons-container">
+    <span class="edit-control-buttons block">
+        <i class="icon-edit"></i>
+        <i class="icon-ok"></i>
+        <i class="icon-remove"></i>
+    </span>
+</span>
+<div class="medicine-details editable-target">
     {% if medicine.details %}
         {{ medicine.details_as_html }}
     {% else %}

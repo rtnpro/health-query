@@ -1,4 +1,11 @@
-<div class="remedy-details" contenteditable="false">
+<span class="edit-control-buttons-container">
+    <span class="edit-control-buttons block">
+        <i class="icon-edit"></i>
+        <i class="icon-ok"></i>
+        <i class="icon-remove"></i>
+    </span>
+</span>
+<div class="remedy-details editable-target">
     {% if remedy.details %}
         {{ remedy.details_as_html }}
     {% else %}
