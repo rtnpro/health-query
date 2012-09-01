@@ -131,8 +131,6 @@ INSTALLED_APPS = (
     'django_markdown',
     'social_auth',
     'gravatar',
-    'django_google_maps',
-    'address',
     'healthquery.diseases',
     'healthquery.common',
     'healthquery.people',
