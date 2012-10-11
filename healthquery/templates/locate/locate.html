@@ -7,6 +7,7 @@
         max-width: none;
     }
 </style>
+<link href="{% static "plugins/autocomplete/jquery-autocomplete.css" %}" rel="stylesheet">
 {% endblock %}
 
 {% block content_header %}
@@ -19,7 +20,7 @@
         <fieldset>
             <div class="row">
                 <div class="span6">
-                    <input type="text" class="input-xxlarge">
+                    <input id="searchBox" type="text" class="input-xxlarge">
                 </div>
                 <div class="span2">
                     <select multiple data-placeholder="Filter by..." class="chzn-select input-xlarge">
@@ -38,6 +39,7 @@
 
 {% block extrajs %}
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="{% static "plugins/autocomplete/jquery-autocomplete.min.js" %}"></script>
 <script src="{% static "js/gmap3.min.js" %}"></script>
 <script>
 $(function(){
@@ -54,6 +56,37 @@ $(function(){
         gmap3_initial_dict.options['center'] = coords;
     }
     $('#hqMaps').gmap3(gmap3_initial_dict);
+
+    $('#searchBox').autocomplete({
+        source: function() {
+            $("#hqMaps").gmap3({
+            action:'getaddress',
+            address: $(this).val(),
+            callback:function(results){
+            if (!results) return;
+            $('#searchBox').autocomplete(
+            'display',
+            results,
+            false
+        );
+    }
+    });
+    },
+    cb:{
+    cast: function(item){
+    return item.formatted_address;
+    },
+    select: function(item) {
+    $("#hqMaps").gmap3(
+    {action:'clear', name:'marker'},
+    {action:'addMarker',
+    latLng:item.geometry.location,
+    map:{center:true}
+    }
+    );
+    }
+    }
+    });
 });
 </script>
 {% endblock %}
